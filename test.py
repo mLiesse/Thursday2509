@@ -7,6 +7,7 @@ def square(number):
 # print(square(m))
 
 def solve_pythagorean_triplets_z_limited(limit):
+    """Finds all Pythagorean triplets (x, y, z) such that x^2 + y^2 = z^2 for z < limit."""
     solutions = []
     for z in range(1, limit):
         for x in range(1, z):
@@ -17,7 +18,7 @@ def solve_pythagorean_triplets_z_limited(limit):
     return solutions
 
 def main():
-    limit = 100
+    limit = 20
     print(solve_pythagorean_triplets_z_limited(limit))
 
 if __name__ == "__main__":
