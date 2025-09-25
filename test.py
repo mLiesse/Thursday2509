@@ -6,17 +6,19 @@ def square(number):
 
 # print(square(m))
 
-def main(limit):
+def solve_pythagorean_triplets_z_limited(limit):
     solutions = []
-    for z in range(limit):
-        for x in range(z+1):
-            for y in range(x,z):
+    for z in range(1, limit):
+        for x in range(1, z):
+            for y in range(1, x+1):
                 if x**2 + y**2 == z**2:
                     solutions.append((x, y, z))
         
     return solutions
 
-#print(solve_pythagorean_triplets_z_limited(20))
+def main():
+    limit = 100
+    print(solve_pythagorean_triplets_z_limited(limit))
 
 if __name__ == "__main__":
-    print(main(20))
+    main()
