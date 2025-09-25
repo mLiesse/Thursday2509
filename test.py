@@ -27,7 +27,9 @@ def solve_pythagorean_triplets_z_limited(limit:int) -> list[tuple[int]]:
         return solutions
     
 def solve_pythagorean_triplets_z_limited_bis(limit:int) -> list[tuple[int]]:
-    """Finds all Pythagorean triplets (x, y, z) such that x^2 + y^2 = z^2 for z < limit."""
+    """
+    Finds all Pythagorean triplets (x, y, z) such that x^2 + y^2 = z^2 for z < limit.
+    """
 
     if not isinstance(limit, int):
         raise TypeError("Limit must be an integer.")
@@ -57,6 +59,9 @@ def add_list(list1: list[int], list2: list[int]) -> dict[tuple, int]:
     return dictionary
 
 def pythagorean_triplets_smart(limit:int) -> list[list[int]]:
+    """
+    Finds all Pythagorean triplets (x, y, z) such that x^2 + y^2 = z^2 for z < limit more efficiently.
+    """
 
     numbers = list(range(1, limit+1))
     squares = square_list(numbers)
